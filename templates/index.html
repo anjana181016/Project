@@ -1,0 +1,57 @@
+<! DOCTYPE html>
+<html>
+<head>
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+
+
+</head>
+<body class="b_in" style="background-image: url({{ url_for('static', filename='diabetic patient.jpg') }});background-repeat: no-repeat;background-size: 100% 100%;background-attachment: fixed;" >
+	<div class="description">
+		<h1 class="name">Diabetes Predictor</h1>
+		<p class="des">A web application that tells you about your diebetic health(by its intelligent machine learning model), developed with Flask and deployed on Heroku</p>
+	</div>
+	
+	<div class="flex_container">
+	<div class="ml-container">	  
+    		<form action="/predict" method="POST">
+                <input class="form-input" type="text" name="Pregnancies" size="50" placeholder="Number of Pregnancies eg. 0" ><br>
+                <input class="form-input" type="text" name="Glucose" size="50" placeholder="Glucose (mg/dL) eg. 80"><br>
+                <input class="form-input" type="text" name="Blood Pressure" size="50" placeholder="Blood Pressure (mmHg) eg. 80"><br>
+                <input class="form-input" type="text" name="Skin Thickness" size="50" placeholder="Skin Thickness (mm) eg. 20"><br>
+                <input class="form-input" type="text" name="Insulin" size="50" placeholder="Insulin Level (IU/mL) eg. 80"><br>
+                <input class="form-input" type="text" name="BMI" size="50" placeholder="Body Mass Index (kg/m²) eg. 23.1"><br>
+                <input class="form-input" type="text" name="DPF" size="50" placeholder="Diabetes Pedigree Function eg. 0.52"><br>
+                <input class="form-input" type="text" name="Age" size="50" placeholder="Age (years) eg. 34"><br><br>
+
+        	<input type="Submit" class="my-button" value="Predict"> &ensp;
+		<input type="reset" class ="my-button" value="Reset">
+        	</form>
+    	</div>
+
+	<div class="link">
+		<br><br><a href="https://github.com/Pawan-ky/" target="_blank" title="Github repository">
+		<img src="{{ url_for('static', filename='GitHub-Mark-64px.png') }}" border="0" width="60" height="60" align="right-center"><br><br><br>
+		</a>
+		
+		<a href="https://www.linkedin.com/in/k-pawan" target="_blank" title="Linkedin profile">
+		<img src="{{ url_for('static', filename='LI-In-Bug.png') }}" border="0" width="60" height="50"><br>
+		</a>
+	</div>
+
+	</div>
+
+	<div class="git_des">
+		<p class="p_des"> This project is running on Heroku Cloud Platform, you can refer the source code and build your 
+				  own application.To see the code click <a href="https://github.com/Pawan-ky/" target="_blank" title="address of this project's source code"> here
+		</p>
+	</div>
+	
+	
+	
+	
+
+
+
+</body>
+</html>
