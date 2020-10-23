@@ -1,0 +1,40 @@
+<! DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body class="b_re" style="background-color:#BEBEBE">
+
+	<div class="description">
+		<h1 class="name">Diabetes Predictor</h1>
+		<p class="des">A web application that tells you about your diebetic health(by its intelligent machine learning model), developed with Flask and deployed on Heroku</p>
+	</div>
+
+	<div class="flex_container">
+	<div class="results">
+		{% if predict==1 %}
+			<h1 class="dc">After analysing your input data,Sorry to say that <span class='danger'>You have DIABETES.</span> see your doctor.</h1>
+			<img class="gif" src="{{ url_for('static', filename='diabetes.gif') }}" alt="Diabetes Image">
+		{% elif predict==0 %}
+			<h1 class="sc">According to your input data <span class='safe'>"you are a healthy person" CONGRATS!!</span></h1>
+			<img class="gif1" src="{{ url_for('static', filename='nodiabetes.gif') }}" alt="Not Diabetes Image">
+		{% endif %}
+	</div>
+		<div class="link">
+		<br><br><a href="https://github.com/Pawan-ky/" target="_blank" title="Github repository">
+		<img src="../static/GitHub-Mark-64px.png" border="0" width="60" height="60" align="right-center"><br><br><br>
+		</a>
+
+		<a href="https://www.linkedin.com/in/k-pawan" target="_blank" title="Linkedin profile">
+		<img src="../static/LI-In-Bug.png" border="0" width="60" height="50"><br>
+		</a>
+		</div>
+	</div>
+
+
+</body>
+</html>
